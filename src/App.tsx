@@ -31,7 +31,7 @@ function App() {
             Samuel Ainsworth
           </h1>
           <img
-            src="https://samlikes.pizza/squatting.jpg"
+            src="squatting.jpg"
             alt="Profile"
             style={{ width: "100%", borderRadius: "5px" }}
           />
