@@ -77,7 +77,7 @@ function App() {
             <li>
               <i>July 19, 2021:</i>{" "}
               <a href="pluto_interval_blog.jl.html">
-                Interval Arithmetic: Not All Intervals are Created Equal
+                God Give Me a Sine: Adventures in Interval Arithmetic
               </a>
               . A new blog post on interval arithmetic, and some of its quirks.
             </li>
