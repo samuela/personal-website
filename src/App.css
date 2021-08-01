@@ -40,7 +40,9 @@
 body {
   /* background-color: #282c34; */
   background-color: #e9ecef;
-  font-family: monospace;
+  /* Most recommendations suggest Courier New, but I actually like Courier a bit
+  better, as it's a bit thicker. */
+  font-family: Courier, monospace;
 }
 
 a {
