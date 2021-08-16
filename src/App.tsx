@@ -75,21 +75,21 @@ function App() {
           <h2>Blog and news</h2>
           <ul>
             <li>
-              <i>July 19, 2021:</i>{" "}
+              <i>July 19, 2021:</i> 📝{" "}
               <a href="pluto_interval_blog.jl.html">
                 God Give Me a Sine: Adventures in Interval Arithmetic
               </a>
               . A new blog post on interval arithmetic, and some of its quirks.
             </li>
             <li>
-              <i>March 5, 2021:</i> Our work{" "}
+              <i>March 5, 2021:</i> Our work 📜{" "}
               <a href="https://arxiv.org/abs/2012.06684">
                 Faster Policy Learning with Continuous-Time Gradients
               </a>{" "}
               has been accepted to L4DC 2021!
             </li>
             <li>
-              <i>Sept. 3, 2019:</i> Our paper{" "}
+              <i>Sept. 3, 2019:</i> Our paper 📜{" "}
               <a href="https://arxiv.org/abs/1912.01649">
                 Mo States Mo Problems
               </a>{" "}
