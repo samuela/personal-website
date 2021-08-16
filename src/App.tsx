@@ -116,7 +116,7 @@ function App() {
           <Container style={{ paddingLeft: 0, paddingRight: 0 }}>
             <Row style={{ marginBottom: "10px" }}>
               <Col xs={3} style={{ backgroundColor: "white" }}>
-                <img src="ctpg.png" style={{ width: "100%" }} />
+                <img src="ctpg.png" style={{ width: "100%" }} alt="" />
               </Col>
               <Col xs={9} style={{ backgroundColor: "white" }}>
                 <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
@@ -137,7 +137,7 @@ function App() {
 
             <Row style={{ marginBottom: "10px" }}>
               <Col xs={3} style={{ backgroundColor: "white" }}>
-                <img src="msmp.png" style={{ width: "100%" }} />
+                <img src="msmp.png" style={{ width: "100%" }} alt="" />
               </Col>
               <Col xs={9} style={{ backgroundColor: "white" }}>
                 <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
@@ -157,7 +157,7 @@ function App() {
 
             <Row style={{ marginBottom: "10px" }}>
               <Col xs={3} style={{ backgroundColor: "white" }}>
-                <img src="mosaic.png" style={{ width: "100%" }} />
+                <img src="mosaic.png" style={{ width: "100%" }} alt="" />
               </Col>
               <Col xs={9} style={{ backgroundColor: "white" }}>
                 <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
@@ -177,7 +177,7 @@ function App() {
 
             <Row style={{ marginBottom: "10px" }}>
               <Col xs={3} style={{ backgroundColor: "white" }}>
-                <img src="factvae.png" style={{ width: "100%" }} />
+                <img src="factvae.png" style={{ width: "100%" }} alt="" />
               </Col>
               <Col xs={9} style={{ backgroundColor: "white" }}>
                 <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
@@ -196,7 +196,7 @@ function App() {
 
             <Row style={{ marginBottom: "10px" }}>
               <Col xs={3} style={{ backgroundColor: "white" }}>
-                <img src="oi-vae.png" style={{ width: "100%" }} />
+                <img src="oi-vae.png" style={{ width: "100%" }} alt="" />
               </Col>
               <Col xs={9} style={{ backgroundColor: "white" }}>
                 <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
@@ -221,6 +221,7 @@ function App() {
                 <img
                   src="interactive-preferences-learning.png"
                   style={{ width: "100%" }}
+                  alt=""
                 />
               </Col>
               <Col xs={9} style={{ backgroundColor: "white" }}>
