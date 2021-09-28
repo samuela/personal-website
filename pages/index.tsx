@@ -1,13 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Badge, Col, Container, Row } from "react-bootstrap";
-import ctpgImg from "../public/ctpg.png";
-import factvaeImg from "../public/factvae.png";
-import interactivePreferencesLearningImg from "../public/interactive-preferences-learning.png";
-import mosaicImg from "../public/mosaic.png";
-import msmpImg from "../public/msmp.png";
-import oivaeImg from "../public/oi-vae.png";
-import squattingPic from "../public/squatting.jpg";
 
 function HomePage() {
   return (
@@ -35,10 +27,10 @@ function HomePage() {
             >
               Samuel Ainsworth
             </h1>
-            <Image
-              src={squattingPic}
+            <img
+              src="/squatting.jpg"
               alt="Profile picture"
-              layout="responsive"
+              style={{ width: "100%", borderRadius: "5px" }}
             />
             <h2
               style={{
@@ -123,7 +115,7 @@ function HomePage() {
             <Container style={{ paddingLeft: 0, paddingRight: 0 }}>
               <Row style={{ marginBottom: "10px" }}>
                 <Col xs={3} style={{ backgroundColor: "white" }}>
-                  <Image src={ctpgImg} layout="responsive" alt="" />
+                  <img src="ctpg.png" style={{ width: "100%" }} alt="" />
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
                   <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
@@ -144,7 +136,7 @@ function HomePage() {
 
               <Row style={{ marginBottom: "10px" }}>
                 <Col xs={3} style={{ backgroundColor: "white" }}>
-                  <Image src={msmpImg} layout="responsive" alt="" />
+                  <img src="msmp.png" style={{ width: "100%" }} alt="" />
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
                   <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
@@ -164,7 +156,7 @@ function HomePage() {
 
               <Row style={{ marginBottom: "10px" }}>
                 <Col xs={3} style={{ backgroundColor: "white" }}>
-                  <Image src={mosaicImg} layout="responsive" alt="" />
+                  <img src="mosaic.png" style={{ width: "100%" }} alt="" />
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
                   <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
@@ -184,7 +176,7 @@ function HomePage() {
 
               <Row style={{ marginBottom: "10px" }}>
                 <Col xs={3} style={{ backgroundColor: "white" }}>
-                  <Image src={factvaeImg} layout="responsive" alt="" />
+                  <img src="factvae.png" style={{ width: "100%" }} alt="" />
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
                   <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
@@ -203,7 +195,7 @@ function HomePage() {
 
               <Row style={{ marginBottom: "10px" }}>
                 <Col xs={3} style={{ backgroundColor: "white" }}>
-                  <Image src={oivaeImg} layout="responsive" alt="" />
+                  <img src="oi-vae.png" style={{ width: "100%" }} alt="" />
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
                   <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
@@ -225,10 +217,9 @@ function HomePage() {
 
               <Row style={{ marginBottom: "10px" }}>
                 <Col xs={3} style={{ backgroundColor: "white" }}>
-                  <Image
-                    src={interactivePreferencesLearningImg}
-                    layout="responsive"
-                    alt=""
+                  <img
+                    src="interactive-preferences-learning.png"
+                    style={{ width: "100%" }}
                   />
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
