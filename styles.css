@@ -1,0 +1,21 @@
+body {
+  /* background-color: #282c34; */
+  background-color: #e9ecef;
+  /* Most recommendations suggest Courier New, but I actually like Courier a bit
+  better, as it's a bit thicker. */
+  font-family: Courier, monospace;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+}
+
+h1,
+h2 {
+  color: darkred;
+  font-weight: bold;
+}
