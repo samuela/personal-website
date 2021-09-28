@@ -1,10 +1,17 @@
 // See https://stackoverflow.com/a/60673785/3880977
 import "bootstrap/dist/css/bootstrap.css";
 import Head from "next/head";
+import Script from "next/script";
 import "../styles.css";
 
 // This default export is required in a new `pages/_app.js` file.
-export default function App({ Component, pageProps }) {
+export default function App({
+  Component,
+  pageProps,
+}: {
+  Component: any;
+  pageProps: any;
+}) {
   return (
     <>
       <Head>
@@ -16,14 +23,16 @@ export default function App({ Component, pageProps }) {
         {/* See https://stackoverflow.com/questions/24428476/target-blank-in-all-link */}
         <base target="_blank" />
 
-        {/* Global site tag (gtag.js) - Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-2B3B8YF3B7"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        {/* For bootstrap */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
+      {/* Global site tag (gtag.js) - Google Analytics */}
+      <Script src="https://ww.googletagmanager.com/gtag/js?id=G-2B3B8YF3B7" />
+      <Script
+        id="gtag"
+        dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -31,12 +40,9 @@ export default function App({ Component, pageProps }) {
               page_path: window.location.pathname,
             });
           `,
-          }}
-        />
+        }}
+      />
 
-        {/* For bootstrap */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
       <Component {...pageProps} />
     </>
   );

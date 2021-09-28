@@ -50,21 +50,21 @@ function HomePage() {
             <p style={{ backgroundColor: "yellow" }}>
               I am graduating Spring 2022 and currently on the job market! Feel
               free to <a href="mailto:skainsworth@gmail.com">get in touch</a>!
-              Here's my{" "}
+              Here&apos;s my{" "}
               <a href="https://docs.google.com/document/d/1tkn7R81TYDrTEphKRFxw7UqwiWb4PcVYuzWdX2mzaOU/edit?usp=sharing">
                 CV
               </a>
               .
             </p>
             <p>
-              I'm a hacker at heart, moonlighting as a PhD candidate in the
+              I&apos;m a hacker at heart, moonlighting as a PhD candidate in the
               School of Computer Science &amp; Engineering at the University of
-              Washington where I work on machine learning and robotics. I'm
+              Washington where I work on machine learning and robotics. I&apos;m
               advised by <a href="https://goodrobot.ai/">Sidd Srinivasa</a>. My
               research interests span motion planning, reinforcement learning,
               deep learning, optimization, and formal verification. In the past
-              I've also worked on Bayesian modeling, variational inference, deep
-              generative models, and more.
+              I&apos;ve also worked on Bayesian modeling, variational inference,
+              deep generative models, and more.
             </p>
             <p>
               Before joining UW I spent four wonderful years at Brown
@@ -148,8 +148,8 @@ function HomePage() {
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
                   <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
-                    Mo' States Mo' Problems: Emergency Stop Mechanisms from
-                    Observation
+                    Mo&apos; States Mo&apos; Problems: Emergency Stop Mechanisms
+                    from Observation
                   </p>
                   <small style={{ fontSize: "0.75rem" }}>
                     <b>S. Ainsworth</b>, M. Barnes, S. Srinivasa
