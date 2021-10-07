@@ -149,7 +149,8 @@ function HomePage() {
                   <p style={{ fontSize: "0.875rem" }}>
                     <Badge className="bg-success">NeurIPS 2019</Badge> [
                     <a href="https://arxiv.org/abs/1912.01649">paper</a>] [
-                    <a href="https://github.com/samuela/e-stops">code</a>]
+                    <a href="https://github.com/samuela/e-stops">code</a>] [
+                    <a href="estop-poster.pdf">poster</a>]
                   </p>
                 </Col>
               </Row>
