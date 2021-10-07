@@ -97,7 +97,7 @@ function HomePage() {
               <li>
                 <i>May 15, 2018:</i> Excited to join Google for a research
                 internship this summer advised by{" "}
-                <a href="https://derifatives.github.io/">Rif Saurous</a> and{" "}
+                <a href="https://derifatives.github.io/">Rif A. Saurous</a> and{" "}
                 <a href="https://research.google/people/KevinMurphy/">
                   Kevin Murphy
                 </a>
