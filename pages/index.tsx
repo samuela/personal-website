@@ -40,13 +40,19 @@ function HomePage() {
               About me
             </h2>
             <p style={{ backgroundColor: "yellow" }}>
-              I am graduating Spring 2022 and currently on the job market! Feel
-              free to <a href="mailto:skainsworth@gmail.com">get in touch</a>!
-              Here&apos;s my{" "}
-              <a href="https://docs.google.com/document/d/1tkn7R81TYDrTEphKRFxw7UqwiWb4PcVYuzWdX2mzaOU/edit?usp=sharing">
-                CV
-              </a>
-              .
+              <span style={{ textDecoration: "line-through" }}>
+                I am graduating Spring 2022 and currently on the job market!
+                Feel free to{" "}
+                <a href="mailto:skainsworth@gmail.com">get in touch</a>!
+                Here&apos;s my{" "}
+                <a href="https://docs.google.com/document/d/1tkn7R81TYDrTEphKRFxw7UqwiWb4PcVYuzWdX2mzaOU/edit?usp=sharing">
+                  CV
+                </a>
+                .
+              </span>{" "}
+              <br />
+              I&apos;m thrilled to announce that I will be joining{" "}
+              <b>Cruise AI Research</b> as a Research Scientist this fall!
             </p>
             <p>
               I&apos;m a hacker at heart, moonlighting as a PhD candidate in the
