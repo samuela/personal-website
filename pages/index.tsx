@@ -52,7 +52,11 @@ function HomePage() {
               </span>{" "}
               <br />
               I&apos;m thrilled to announce that I will be joining{" "}
-              <b>Cruise AI Research</b> as a Research Scientist this fall!
+              <b>Cruise AI Research</b> as a Research Scientist this fall. Shout
+              out to{" "}
+              <a href="https://www.linkedin.com/in/chaiyuning/">Yuning Chai</a>{" "}
+              and{" "}
+              <a href="https://www.linkedin.com/in/lisakattan/">Lisa Kattan</a>!
             </p>
             <p>
               I&apos;m a hacker at heart, moonlighting as a PhD candidate in the
