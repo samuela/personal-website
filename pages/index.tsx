@@ -83,6 +83,11 @@ function HomePage() {
             <h2>Blog and news</h2>
             <ul>
               <li>
+                <i>January 20, 2023:</i> 📜{" "}
+                <a href="https://arxiv.org/abs/2209.04836">Git Re-Basin</a> has
+                been accepted to ICLR 2023 as an oral, notable top 5%!
+              </li>
+              <li>
                 <i>July 19, 2021:</i> 📝{" "}
                 <a href="pluto_interval_blog.jl.html">
                   God Give Me a Sine: Adventures in Interval Arithmetic
