@@ -39,34 +39,15 @@ function HomePage() {
             >
               About me
             </h2>
-            <p style={{ backgroundColor: "yellow" }}>
-              <span style={{ textDecoration: "line-through" }}>
-                I am graduating Spring 2022 and currently on the job market!
-                Feel free to{" "}
-                <a href="mailto:skainsworth@gmail.com">get in touch</a>!
-                Here&apos;s my{" "}
-                <a href="https://docs.google.com/document/d/1tkn7R81TYDrTEphKRFxw7UqwiWb4PcVYuzWdX2mzaOU/edit?usp=sharing">
-                  CV
-                </a>
-                .
-              </span>{" "}
-              <br />
-              I&apos;m thrilled to announce that I will be joining{" "}
-              <b>Cruise AI Research</b> as a Research Scientist this fall. Shout
-              out to{" "}
-              <a href="https://www.linkedin.com/in/chaiyuning/">Yuning Chai</a>{" "}
-              and{" "}
-              <a href="https://www.linkedin.com/in/lisakattan/">Lisa Kattan</a>!
-            </p>
             <p>
-              I&apos;m a hacker at heart, moonlighting as a PhD candidate in the
-              School of Computer Science &amp; Engineering at the University of
-              Washington where I work on machine learning and robotics. I&apos;m
-              advised by <a href="https://goodrobot.ai/">Sidd Srinivasa</a>. My
-              research interests span motion planning, reinforcement learning,
-              deep learning, optimization, and formal verification. In the past
-              I&apos;ve also worked on Bayesian modeling, variational inference,
-              deep generative models, and more.
+              I&apos;m a hacker at heart, moonlighting as a Senior Research
+              Scientist at Cruise AI Research. I completed my PhD at the
+              University of Washington where I worked on machine learning and
+              robotics, advised by{" "}
+              <a href="https://goodrobot.ai/">Sidd Srinivasa</a>. My research
+              interests span deep learning, programming languages, and drug
+              discovery. In the past I&apos;ve also worked on Bayesian modeling,
+              variational inference, deep generative models, and more.
             </p>
             <p>
               Before joining UW I spent four wonderful years at Brown
@@ -78,6 +59,10 @@ function HomePage() {
               <a href="https://twitter.com/SamuelAinsworth">Twitter</a>,{" "}
               <a href="https://github.com/samuela">GitHub</a>, and{" "}
               <a href="https://www.linkedin.com/in/samuelainsworth">LinkedIn</a>
+              . Outdated{" "}
+              <a href="https://docs.google.com/document/d/1tkn7R81TYDrTEphKRFxw7UqwiWb4PcVYuzWdX2mzaOU/edit?usp=sharing">
+                CV
+              </a>
               .
             </p>
             <h2>Blog and news</h2>
@@ -150,6 +135,10 @@ function HomePage() {
                     <br></br> [
                     <a href="https://docs.google.com/spreadsheets/d/1INZI9epkfBkPOlKuJFaffUCOKDns87Iqg4zovHnf-zs/edit">
                       #1 highest score out of 4,849 submissions
+                    </a>
+                    ] [
+                    <a href="https://twitter.com/SamuelAinsworth/status/1569719494645526529">
+                      tweet thread
                     </a>
                     ] [
                     <a href="https://github.com/samuela/git-re-basin">code</a>]
