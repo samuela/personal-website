@@ -284,8 +284,17 @@ function HomePage() {
                 </Col>
               </Row>
             </Container>
-            <h2>Selected projects</h2>
+            <h2>Open source</h2>
             <ul>
+              <li>
+                Founder of the{" "}
+                <a href="https://discourse.nixos.org/t/announcing-the-nixos-cuda-maintainers-team-and-a-call-for-maintainers/18074">
+                  @NixOS/cuda-maintainers team
+                </a>
+                . Active{" "}
+                <a href="https://github.com/NixOS/nixpkgs">NixOS/nixpkgs</a>{" "}
+                maintainer.
+              </li>
               <li>
                 <a href="https://github.com/samuela/rustybox">rustybox</a> is a
                 complete, 100% Rust fork of the busybox project.
@@ -294,12 +303,9 @@ function HomePage() {
                 <a href="https://github.com/samuela/bidirectional-typing">
                   bidirectional-typing
                 </a>{" "}
-                is a bidirectional type inference algorithm based on{" "}
-                <a href="https://www.cl.cam.ac.uk/~nk480/bidir.pdf">
-                  this paper
-                </a>
-                , and includes a pedagogically-minded design and readme for
-                others getting started with bidirectional typing.
+                is a bidirectional type inference implementation, including a
+                pedagogically-minded design and readme for folks getting started
+                with bidirectional type inference.
               </li>
               <li>
                 <a href="https://github.com/samuela/remod">remod</a> is a
@@ -311,6 +317,10 @@ function HomePage() {
                 </a>{" "}
                 transmits data between phones using only audio. The magic lies
                 in error correction.
+              </li>
+              <li>
+                <a href="https://github.com/samuela/nixos-up">nixos-up</a> is
+                the fastest way to install NixOS.
               </li>
             </ul>
             <p>
