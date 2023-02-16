@@ -125,11 +125,51 @@ function HomePage() {
             <Container style={{ paddingLeft: 0, paddingRight: 0 }}>
               <Row style={{ marginBottom: "10px" }}>
                 <Col xs={3} style={{ backgroundColor: "white" }}>
+                  <img
+                    src="git-re-basin.png"
+                    style={{ width: "100%" }}
+                    alt=""
+                  />
+                </Col>
+                <Col xs={9} style={{ backgroundColor: "white" }}>
+                  <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
+                    <a href="https://arxiv.org/abs/2209.04836">
+                      Git Re-Basin: Merging Models modulo Permutation Symmetries
+                    </a>
+                  </p>
+                  <small style={{ fontSize: "0.75rem" }}>
+                    <b>S. Ainsworth</b>, J. Hayase, S. Srinivasa
+                  </small>
+                  <p style={{ fontSize: "0.875rem" }}>
+                    <Badge className="bg-success">ICLR 2023 Oral</Badge>
+                    <br></br> [
+                    <a href="https://docs.google.com/spreadsheets/d/1INZI9epkfBkPOlKuJFaffUCOKDns87Iqg4zovHnf-zs/edit">
+                      #1 highest score out of 4,849 submissions
+                    </a>
+                    ] [
+                    <a href="https://github.com/samuela/git-re-basin">code</a>]
+                    [
+                    <a href="https://www.youtube.com/watch?v=svn-EBN2kAk">
+                      video
+                    </a>
+                    ]
+                    <p>
+                      Invited talks at Berkeley AI Research, Columbia, DLCT,
+                      Pacific Northwest National Labs, Cruise, and more.
+                    </p>
+                  </p>
+                </Col>
+              </Row>
+
+              <Row style={{ marginBottom: "10px" }}>
+                <Col xs={3} style={{ backgroundColor: "white" }}>
                   <img src="ctpg.png" style={{ width: "100%" }} alt="" />
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
                   <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
-                    Faster Policy Learning with Continuous-Time Gradients
+                    <a href="https://arxiv.org/abs/2012.06684">
+                      Faster Policy Learning with Continuous-Time Gradients
+                    </a>
                   </p>
                   <small style={{ fontSize: "0.75rem" }}>
                     <b>S. Ainsworth</b>, K. Lowrey, J. Thickstun, Z. Harchaoui,
@@ -137,7 +177,6 @@ function HomePage() {
                   </small>
                   <p style={{ fontSize: "0.875rem" }}>
                     <Badge className="bg-success">L4DC 2021</Badge> [
-                    <a href="https://arxiv.org/abs/2012.06684">paper</a>] [
                     <a href="https://github.com/samuela/ctpg">code</a>] [
                     <a href="ctpg_poster.pdf">poster</a>]
                   </p>
@@ -150,15 +189,16 @@ function HomePage() {
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
                   <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
-                    Mo&apos; States Mo&apos; Problems: Emergency Stop Mechanisms
-                    from Observation
+                    <a href="https://arxiv.org/abs/1912.01649">
+                      Mo&apos; States Mo&apos; Problems: Emergency Stop
+                      Mechanisms from Observation
+                    </a>
                   </p>
                   <small style={{ fontSize: "0.75rem" }}>
                     <b>S. Ainsworth</b>, M. Barnes, S. Srinivasa
                   </small>
                   <p style={{ fontSize: "0.875rem" }}>
                     <Badge className="bg-success">NeurIPS 2019</Badge> [
-                    <a href="https://arxiv.org/abs/1912.01649">paper</a>] [
                     <a href="https://github.com/samuela/e-stops">code</a>] [
                     <a href="estop-poster.pdf">poster</a>]
                   </p>
@@ -171,16 +211,17 @@ function HomePage() {
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
                   <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
-                    Mosaic: A Sample-Based Database System for Open World Query
-                    Processing
+                    <a href="https://arxiv.org/abs/1912.07777">
+                      Mosaic: A Sample-Based Database System for Open World
+                      Query Processing
+                    </a>
                   </p>
                   <small style={{ fontSize: "0.75rem" }}>
                     L. Orr, <b>S. Ainsworth</b>, W. Cai, K. Jamieson, M.
                     Balazinska, D. Suciu
                   </small>
                   <p style={{ fontSize: "0.875rem" }}>
-                    <Badge className="bg-success">CIDR 2020</Badge> [
-                    <a href="https://arxiv.org/abs/1912.07777">paper</a>]
+                    <Badge className="bg-success">CIDR 2020</Badge>
                   </p>
                 </Col>
               </Row>
@@ -191,15 +232,16 @@ function HomePage() {
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
                   <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
-                    Disentangled VAE Representations for Multi-Aspect and
-                    Missing Data
+                    <a href="https://arxiv.org/abs/1806.09060">
+                      Disentangled VAE Representations for Multi-Aspect and
+                      Missing Data
+                    </a>
                   </p>
                   <small style={{ fontSize: "0.75rem" }}>
                     <b>S. Ainsworth</b>, N. Foti, E. Fox
                   </small>
                   <p style={{ fontSize: "0.875rem" }}>
-                    <Badge className="bg-success">arXiv preprint</Badge> [
-                    <a href="https://arxiv.org/abs/1806.09060">paper</a>]
+                    <Badge className="bg-success">arXiv preprint</Badge>
                   </p>
                 </Col>
               </Row>
@@ -210,18 +252,17 @@ function HomePage() {
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
                   <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
-                    oi-VAE: Output Interpretable VAEs for Nonlinear Group Factor
-                    Analysis
+                    <a href="http://proceedings.mlr.press/v80/ainsworth18a.html">
+                      oi-VAE: Output Interpretable VAEs for Nonlinear Group
+                      Factor Analysis
+                    </a>
                   </p>
                   <small style={{ fontSize: "0.75rem" }}>
                     <b>S. Ainsworth</b>, N. Foti, A. Lee, E. Fox
                   </small>
                   <p style={{ fontSize: "0.875rem" }}>
                     <Badge className="bg-success">ICML 2018</Badge> [
-                    <a href="http://proceedings.mlr.press/v80/ainsworth18a.html">
-                      paper
-                    </a>
-                    ] [<a href="https://vimeo.com/287767071">video</a>]
+                    <a href="https://vimeo.com/287767071">video</a>]
                   </p>
                 </Col>
               </Row>
@@ -235,15 +276,16 @@ function HomePage() {
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
                   <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
-                    Interactive Preference Learning of Utility Functions for
-                    Multi-Objective Optimization
+                    <a href="https://arxiv.org/abs/1612.04453">
+                      Interactive Preference Learning of Utility Functions for
+                      Multi-Objective Optimization
+                    </a>
                   </p>
                   <small style={{ fontSize: "0.75rem" }}>
                     I. Dewancker, M. McCourt, <b>S. Ainsworth</b>
                   </small>
                   <p style={{ fontSize: "0.875rem" }}>
-                    <Badge className="bg-success">NIPS 2016 workshop</Badge> [
-                    <a href="https://arxiv.org/abs/1612.04453">paper</a>]
+                    <Badge className="bg-success">NIPS 2016 workshop</Badge>
                   </p>
                 </Col>
               </Row>
