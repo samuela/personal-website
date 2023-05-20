@@ -10,10 +10,8 @@ function HomePage() {
       <Container
         style={{
           backgroundColor: "#fefefe",
-          maxWidth: "600px",
-          paddingLeft: "25px",
-          paddingRight: "25px",
-          paddingTop: "25px",
+          maxWidth: "700px",
+          padding: "1.5em",
         }}
         fluid="sm"
       >
@@ -48,8 +46,9 @@ function HomePage() {
               University, followed by a stint in Silicon Valley working on
               self-driving cars among other wild things.
             </p>
+            <p>My life goal is to cure spondyloarthritis.</p>
             <p>
-              You can check me out on{" "}
+              You can find me on{" "}
               <a href="https://twitter.com/SamuelAinsworth">Twitter</a>,{" "}
               <a href="https://github.com/samuela">GitHub</a>, and{" "}
               <a href="https://www.linkedin.com/in/samuelainsworth">LinkedIn</a>
@@ -142,8 +141,9 @@ function HomePage() {
                     </a>
                     ]
                     <br />
-                    Invited talks at Berkeley AI Research, Columbia, DLCT,
-                    Pacific Northwest National Labs, Cruise, and more.
+                    Invited talks at Berkeley AI Research, Columbia, ML
+                    Collective, Pacific Northwest National Labs, Cruise, and
+                    more.
                   </p>
                 </Col>
               </Row>
