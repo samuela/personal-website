@@ -39,9 +39,9 @@ function HomePage() {
               University of Washington where I worked on machine learning and
               robotics, advised by{" "}
               <a href="https://goodrobot.ai/">Sidd Srinivasa</a>. My research
-              interests span deep learning, programming languages, and drug
-              discovery. In the past I&apos;ve also worked on Bayesian modeling,
-              variational inference, deep generative models, and more.
+              interests span deep learning, programming languages, and
+              immunology. In the past I&apos;ve also worked on Bayesian
+              modeling, variational inference, deep generative models, and more.
             </p>
             <p>
               Before joining UW I spent four wonderful years at Brown
