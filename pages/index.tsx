@@ -147,10 +147,9 @@ function HomePage() {
                       video
                     </a>
                     ]
-                    <p>
-                      Invited talks at Berkeley AI Research, Columbia, DLCT,
-                      Pacific Northwest National Labs, Cruise, and more.
-                    </p>
+                    <br />
+                    Invited talks at Berkeley AI Research, Columbia, DLCT,
+                    Pacific Northwest National Labs, Cruise, and more.
                   </p>
                 </Col>
               </Row>
