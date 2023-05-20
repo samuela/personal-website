@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Note: Render will try (and fail!) to build with a very old node.js by default. Therefore, we set `engines` in `package.json` to `node >= 16`. See https://render.com/docs/node-version for more info.
 
 ## Available Scripts
 
