@@ -13,12 +13,17 @@ function HomePage() {
           maxWidth: "600px",
           paddingLeft: "25px",
           paddingRight: "25px",
+          paddingTop: "25px",
         }}
         fluid="sm"
       >
         <Row className="justify-content-md-center">
           <Col>
-            <hr />
+            <img
+              src="/iclr2023oral.jpg"
+              alt="ICLR 2023 Oral"
+              style={{ width: "100%", borderRadius: "8px" }}
+            />
             <h1
               style={{
                 fontWeight: "bold",
@@ -27,18 +32,7 @@ function HomePage() {
             >
               Samuel Ainsworth
             </h1>
-            <img
-              src="/squatting.jpg"
-              alt="Profile picture"
-              style={{ width: "100%", borderRadius: "5px" }}
-            />
-            <h2
-              style={{
-                marginTop: "0.5em",
-              }}
-            >
-              About me
-            </h2>
+            <hr />
             <p>
               I&apos;m a hacker at heart, moonlighting as a Senior Research
               Scientist at Cruise AI Research. I completed my PhD at the
