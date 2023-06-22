@@ -46,7 +46,11 @@ function HomePage() {
               University, followed by a stint in Silicon Valley working on
               self-driving cars among other wild things.
             </p>
-            <p>My life goal is to cure spondyloarthritis.</p>
+            <p>
+              My life goal is to cure spondyloarthritis. If you are experiencing
+              SpA and would like to donate blood to research, sign up @{" "}
+              <a href="https://end-as.carrd.co">End AS</a>.
+            </p>
             <p>
               You can find me on{" "}
               <a href="https://twitter.com/SamuelAinsworth">Twitter</a>,{" "}
