@@ -263,6 +263,7 @@ function HomePage() {
                   <img
                     src="interactive-preferences-learning.png"
                     style={{ width: "100%" }}
+                    alt=""
                   />
                 </Col>
                 <Col xs={9} style={{ backgroundColor: "white" }}>
