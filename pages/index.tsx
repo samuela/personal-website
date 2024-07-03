@@ -348,8 +348,7 @@ function HomePage() {
               </li>
             </ul>
             <p>
-              And many more on{" "}
-              <a href="https://github.com/samuela">my GitHub</a>
+              And more on <a href="https://github.com/samuela">my GitHub</a>
               ...
             </p>
           </Col>
