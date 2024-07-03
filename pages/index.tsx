@@ -48,8 +48,9 @@ function HomePage() {
               robotics, advised by{" "}
               <a href="https://goodrobot.ai/">Sidd Srinivasa</a>. My research
               interests span deep learning, programming languages, and
-              immunology. In the past I&apos;ve also worked on Bayesian
-              modeling, variational inference, deep generative models, and more.
+              immunology. I&apos;ve worked variously on Bayesian modeling,
+              reinforcement learning, generative models, deep learning
+              empiricism, and more.
             </p>
             <p>
               Before joining UW I spent four wonderful years at Brown
