@@ -67,7 +67,7 @@ function HomePage() {
               <a href="https://twitter.com/SamuelAinsworth">Twitter</a>,{" "}
               <a href="https://github.com/samuela">GitHub</a>, and{" "}
               <a href="https://www.linkedin.com/in/samuelainsworth">LinkedIn</a>
-              . Outdated{" "}
+              . Here&apos;s my{" "}
               <a href="https://docs.google.com/document/d/1tkn7R81TYDrTEphKRFxw7UqwiWb4PcVYuzWdX2mzaOU/edit?usp=sharing">
                 CV
               </a>
