@@ -305,6 +305,21 @@ function HomePage() {
                 maintainer.
               </li>
               <li>
+                <a href="https://github.com/samuela/torch2jax/">torch2jax</a> [
+                <a href="https://twitter.com/SamuelAinsworth/status/1709236815553769663">
+                  tweet thread
+                </a>
+                ]: Mix-and-match PyTorch and JAX code with seamless, end-to-end
+                autodiff, use JAX classics like jit, grad, and vmap on PyTorch
+                code, and run PyTorch models on TPUs.
+              </li>
+              <li>
+                <a href="https://github.com/samuela/sshenanigans">
+                  sshenanigans
+                </a>
+                : A custom SSH server for building custom SSH servers.
+              </li>
+              <li>
                 <a href="https://github.com/samuela/rustybox">rustybox</a> is a
                 complete, 100% Rust fork of the busybox project.
               </li>
