@@ -297,7 +297,7 @@ function HomePage() {
                 </Col>
               </Row>
             </Container>
-            <h2>Open source</h2>
+            <h2>Open source and other</h2>
             <ul>
               <li>
                 Founder of the{" "}
@@ -322,6 +322,10 @@ function HomePage() {
                   sshenanigans
                 </a>
                 : A custom SSH server for building custom SSH servers.
+              </li>
+              <li>
+                <a href="https://bitbop.io">bitbop.io</a>: Run{" "}
+                <code>ssh bitbop.io</code>, get a GPU dev machine.
               </li>
               <li>
                 <a href="https://github.com/samuela/rustybox">rustybox</a> is a
