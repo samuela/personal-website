@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Specifying the node.js version
 
-Note: Render will try (and fail!) to build with a very old node.js by default. Therefore, we set `engines` in `package.json` to `node >= 16`. See https://render.com/docs/node-version for more info.
+The node.js version is constrained in `package.json`. Absent a setting, Render will try (and occasionally fail!) to build with different node.js versions by default. Therefore, we set `engines` in `package.json`. See https://render.com/docs/node-version for more info.
+
+Note that pinning the node.js version exactly is not possible since Render only supports some subset of versions, and this set is a moving target.
+
+# Getting Started with Create React App
 
 ## Available Scripts
 
