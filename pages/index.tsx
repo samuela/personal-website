@@ -68,6 +68,8 @@ function HomePage() {
             </p>
             <p>
               You can find me on{" "}
+              <a href="https://bsky.app/profile/skainswo.bsky.social">Bluesky</a>,{" "}
+              <a href="https://sigmoid.social/@skainswo">Mastodon</a>,{" "}
               <a href="https://twitter.com/SamuelAinsworth">Twitter</a>,{" "}
               <a href="https://github.com/samuela">GitHub</a>, and{" "}
               <a href="https://www.linkedin.com/in/samuelainsworth">LinkedIn</a>
