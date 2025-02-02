@@ -47,7 +47,7 @@ function HomePage() {
 
             <p>
               I&apos;m a hacker at heart, moonlighting as a Senior Research
-              Scientist at Cruise AI Research. I completed my PhD at the
+              Scientist at Waymo Research. I completed my PhD at the
               University of Washington where I worked on machine learning and
               robotics, advised by{" "}
               <a href="https://goodrobot.ai/">Sidd Srinivasa</a>. My research
