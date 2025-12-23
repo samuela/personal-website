@@ -115,6 +115,32 @@ function HomePage() {
             <Container style={{ paddingLeft: 0, paddingRight: 0 }}>
               <Row style={{ marginBottom: "10px" }}>
                 <Col xs={3} style={{ backgroundColor: "white" }}>
+                  <img src="algotune.png" style={{ width: "100%" }} alt="" />
+                </Col>
+                <Col xs={9} style={{ backgroundColor: "white" }}>
+                  <p style={{ fontSize: "0.875rem", marginBottom: 0 }}>
+                    <a href="https://arxiv.org/abs/2507.15887">
+                      AlgoTune: Can Language Models Speed Up General-Purpose
+                      Numerical Programs?
+                    </a>
+                  </p>
+                  <small style={{ fontSize: "0.75rem" }}>
+                    O. Press, B. Amos, H. Zhao, Y. Wu, <b>S. Ainsworth</b>, D.
+                    Krupke, P. Kidger, T. Sajed, B. Stellato, J. Park, N. Bosch,
+                    E. Meril, A. Steppi, A. Zharmagambetov, F. Zhang, D.
+                    Pérez-Piñeiro, A. Mercurio, N. Zhan, T. Abramovich, K.
+                    Lieret, H. Zhang, M. Bethge, O. Press
+                  </small>
+                  <p style={{ fontSize: "0.875rem" }}>
+                    <Badge className="bg-success">NeurIPS 2025</Badge> [
+                    <a href="https://algotune.io">website</a>] [
+                    <a href="https://github.com/oripress/AlgoTune">code</a>]
+                  </p>
+                </Col>
+              </Row>
+
+              <Row style={{ marginBottom: "10px" }}>
+                <Col xs={3} style={{ backgroundColor: "white" }}>
                   <img
                     src="git-re-basin.png"
                     style={{ width: "100%" }}
