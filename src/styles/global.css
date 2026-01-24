@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  a {
+    @apply text-black font-bold underline;
+  }
+
+  h1 {
+    @apply text-dark-red font-bold text-5xl mt-2;
+  }
+
+  h2 {
+    @apply text-dark-red font-bold text-3xl mt-3;
+  }
+
+  hr {
+    @apply border-t border-gray-300 my-4;
+  }
+
+  ul {
+    @apply list-disc pl-8 mb-4;
+  }
+
+  li {
+    @apply mb-0.5;
+  }
+
+  code {
+    @apply bg-gray-100 px-1 rounded text-sm;
+  }
+}

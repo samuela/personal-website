@@ -1,0 +1,11 @@
+title: "Faster Policy Learning with Continuous-Time Gradients"
+url: "https://arxiv.org/abs/2012.06684"
+authors: "<b>S. Ainsworth</b>, K. Lowrey, J. Thickstun, Z. Harchaoui, S. Srinivasa"
+venue: "L4DC 2021"
+thumbnail: "/ctpg.png"
+order: 3
+links:
+  - label: "code"
+    url: "https://github.com/samuela/ctpg"
+  - label: "poster"
+    url: "/ctpg_poster.pdf"

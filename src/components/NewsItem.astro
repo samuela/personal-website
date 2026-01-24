@@ -1,0 +1,26 @@
+---
+interface Props {
+  date: Date;
+  emoji?: string;
+  content: string;
+}
+
+const { date, emoji, content } = Astro.props;
+
+const formatDate = (d: Date) => {
+  const months = ['January', 'February', 'March', 'April', 'May', 'June',
+                  'July', 'August', 'September', 'October', 'November', 'December'];
+  const month = months[d.getUTCMonth()];
+  const day = d.getUTCDate();
+  const year = d.getUTCFullYear();
+
+  // Handle abbreviations like "Sept." for September
+  const shortMonth = month === 'September' ? 'Sept.' : month;
+
+  return `${shortMonth} ${day}, ${year}`;
+};
+---
+
+<li>
+  <i>{formatDate(date)}:</i>{emoji ? ` ${emoji} ` : ' '}<span set:html={content} />
+</li>

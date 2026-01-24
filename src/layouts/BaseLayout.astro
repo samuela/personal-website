@@ -1,0 +1,27 @@
+---
+import Analytics from '../components/Analytics.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Personal website of Samuel Ainsworth' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <base target="_blank" />
+    <title>{title}</title>
+    <Analytics />
+  </head>
+  <body class="bg-light-gray font-mono antialiased">
+    <slot />
+  </body>
+</html>

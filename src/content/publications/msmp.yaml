@@ -1,0 +1,11 @@
+title: "Mo' States Mo' Problems: Emergency Stop Mechanisms from Observation"
+url: "https://arxiv.org/abs/1912.01649"
+authors: "<b>S. Ainsworth</b>, M. Barnes, S. Srinivasa"
+venue: "NeurIPS 2019"
+thumbnail: "/msmp.png"
+order: 4
+links:
+  - label: "code"
+    url: "https://github.com/samuela/e-stops"
+  - label: "poster"
+    url: "/estop-poster.pdf"

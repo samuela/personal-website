@@ -1,0 +1,16 @@
+title: "Git Re-Basin: Merging Models modulo Permutation Symmetries"
+url: "https://arxiv.org/abs/2209.04836"
+authors: "<b>S. Ainsworth</b>, J. Hayase, S. Srinivasa"
+venue: "ICLR 2023 Oral"
+thumbnail: "/git-re-basin.png"
+order: 2
+links:
+  - label: "#1 highest score out of 4,849 submissions"
+    url: "https://docs.google.com/spreadsheets/d/1INZI9epkfBkPOlKuJFaffUCOKDns87Iqg4zovHnf-zs/edit"
+  - label: "tweet thread"
+    url: "https://twitter.com/SamuelAinsworth/status/1569719494645526529"
+  - label: "code"
+    url: "https://github.com/samuela/git-re-basin"
+  - label: "video"
+    url: "https://www.youtube.com/watch?v=svn-EBN2kAk"
+notes: "Invited talks at Berkeley AI Research, Columbia, ML Collective, Pacific Northwest National Labs, Cruise, and more."

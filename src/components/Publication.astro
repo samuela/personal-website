@@ -1,0 +1,43 @@
+---
+import Badge from './Badge.astro';
+
+interface Props {
+  title: string;
+  url: string;
+  authors: string;
+  venue: string;
+  thumbnail: string;
+  links?: { label: string; url: string }[];
+  notes?: string;
+}
+
+const { title, url, authors, venue, thumbnail, links, notes } = Astro.props;
+---
+
+<div class="flex mb-5">
+  <div class="w-1/4 bg-white">
+    <img src={thumbnail} class="w-full" alt="" />
+  </div>
+  <div class="w-3/4 bg-white pl-3">
+    <p class="text-sm !mb-0">
+      <a href={url}>{title}</a>
+    </p>
+    <small class="text-xs block mb-1" set:html={authors} />
+    <p class="text-sm !mb-0">
+      <Badge text={venue} />
+      {links && links.length > 0 && (
+        <>
+          {links.map((link) => (
+            <span> [<a href={link.url}>{link.label}</a>]</span>
+          ))}
+        </>
+      )}
+      {notes && (
+        <>
+          <br />
+          {notes}
+        </>
+      )}
+    </p>
+  </div>
+</div>

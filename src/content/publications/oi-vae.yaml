@@ -1,0 +1,9 @@
+title: "oi-VAE: Output Interpretable VAEs for Nonlinear Group Factor Analysis"
+url: "http://proceedings.mlr.press/v80/ainsworth18a.html"
+authors: "<b>S. Ainsworth</b>, N. Foti, A. Lee, E. Fox"
+venue: "ICML 2018"
+thumbnail: "/oi-vae.png"
+order: 7
+links:
+  - label: "video"
+    url: "https://vimeo.com/287767071"

@@ -1,0 +1,11 @@
+title: "AlgoTune: Can Language Models Speed Up General-Purpose Numerical Programs?"
+url: "https://arxiv.org/abs/2507.15887"
+authors: "O. Press, B. Amos, H. Zhao, Y. Wu, <b>S. Ainsworth</b>, D. Krupke, P. Kidger, T. Sajed, B. Stellato, J. Park, N. Bosch, E. Meril, A. Steppi, A. Zharmagambetov, F. Zhang, D. Pérez-Piñeiro, A. Mercurio, N. Zhan, T. Abramovich, K. Lieret, H. Zhang, M. Bethge, O. Press"
+venue: "NeurIPS 2025"
+thumbnail: "/algotune.png"
+order: 1
+links:
+  - label: "website"
+    url: "https://algotune.io"
+  - label: "code"
+    url: "https://github.com/oripress/AlgoTune"
