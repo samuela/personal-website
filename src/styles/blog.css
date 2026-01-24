@@ -1,0 +1,196 @@
+/* CSS Custom Properties for dark mode theming */
+:root {
+  --blog-bg: #fffff8;
+  --blog-text: #1a1a1a;
+  --blog-heading: #111111;
+  --blog-link: #1e40af;
+  --blog-muted: #666666;
+  --blog-border: #e5e5e5;
+  --blog-code-bg: #f5f5f0;
+}
+
+.dark {
+  --blog-bg: #1a1a1a;
+  --blog-text: #e5e5e0;
+  --blog-heading: #f5f5f0;
+  --blog-link: #60a5fa;
+  --blog-muted: #999999;
+  --blog-border: #333333;
+  --blog-code-bg: #2d2d2d;
+}
+
+/* Blog-specific typography (Practical Typography inspired) */
+.prose-blog {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  word-spacing: 0.05em;
+}
+
+.prose-blog p {
+  margin-bottom: 1.5em;
+  text-align: left;
+}
+
+.prose-blog h1,
+.prose-blog h2,
+.prose-blog h3,
+.prose-blog h4,
+.prose-blog h5,
+.prose-blog h6 {
+  color: var(--blog-heading);
+  font-weight: 400;
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+  line-height: 1.3;
+}
+
+.prose-blog h1 {
+  font-size: 2rem;
+  border-bottom: 1px solid var(--blog-border);
+  padding-bottom: 0.5em;
+}
+
+.prose-blog h2 {
+  font-size: 1.75rem;
+}
+
+.prose-blog h3 {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.prose-blog h4 {
+  font-size: 1.35rem;
+}
+
+.prose-blog h5 {
+  font-size: 1.2rem;
+}
+
+.prose-blog h6 {
+  font-size: 1.1rem;
+}
+
+.prose-blog a {
+  color: var(--blog-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+  font-weight: normal;
+}
+
+.prose-blog a:hover {
+  color: var(--blog-heading);
+}
+
+.prose-blog ul {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+  list-style-type: disc;
+}
+
+.prose-blog ol {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+  list-style-type: decimal;
+}
+
+.prose-blog li {
+  margin-bottom: 0.5em;
+  display: list-item;
+}
+
+.prose-blog blockquote {
+  border-left: 3px solid var(--blog-border);
+  padding-left: 1.5em;
+  margin: 2em 0;
+  font-style: italic;
+  color: var(--blog-muted);
+}
+
+.prose-blog pre {
+  background: var(--blog-code-bg);
+  padding: 1.5em;
+  border-radius: 0.375rem;
+  overflow-x: auto;
+  margin: 2em 0;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.prose-blog pre code,
+.prose-blog pre code span,
+.astro-code,
+.astro-code code,
+.astro-code span {
+  font-family: 'Source Code Pro', monospace !important;
+  font-weight: 300;
+}
+
+.prose-blog code:not(pre code) {
+  background: var(--blog-code-bg);
+  padding: 0.125em 0.375em;
+  border-radius: 0.25rem;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+/* Inline math sizing */
+.prose-blog .katex:not(.katex-display .katex) {
+  font-size: 1em;
+}
+
+.prose-blog img {
+  max-width: 100%;
+  height: auto;
+  margin: 2em 0;
+  border-radius: 0.375rem;
+}
+
+.prose-blog hr {
+  border: none;
+  border-top: 1px solid var(--blog-border);
+  margin: 3em 0;
+}
+
+.prose-blog table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  font-size: 0.95em;
+}
+
+.prose-blog th,
+.prose-blog td {
+  border: 1px solid var(--blog-border);
+  padding: 0.75em 1em;
+  text-align: left;
+}
+
+.prose-blog th {
+  background: var(--blog-code-bg);
+  font-weight: 500;
+}
+
+/* KaTeX overrides for dark mode */
+.dark .katex {
+  color: var(--blog-text);
+}
+
+.katex-display {
+  margin: 1.5em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Smooth transitions */
+body.blog-body,
+.prose-blog,
+.prose-blog * {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}

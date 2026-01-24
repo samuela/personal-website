@@ -1,0 +1,42 @@
+---
+import { getCollection } from "astro:content";
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import BlogPostCard from "../../components/BlogPostCard.astro";
+
+const posts = await getCollection("blog", ({ data }) => {
+  return import.meta.env.PROD ? !data.draft : true;
+});
+
+const sortedPosts = posts.sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+---
+
+<BlogLayout
+  title="Blog"
+  description="Thoughts on machine learning, programming languages, and more."
+  isIndex={true}
+>
+  <!-- <h1 class="text-5xl font-normal mb-8" style="color: var(--blog-heading);">
+    Blog
+  </h1> -->
+  <div class="space-y-12">
+    {
+      sortedPosts.length === 0 ? (
+        <p class="italic" style="color: var(--blog-muted);">
+          No posts yet. Check back soon!
+        </p>
+      ) : (
+        sortedPosts.map((post) => (
+          <BlogPostCard
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+            slug={post.slug}
+            tags={post.data.tags}
+          />
+        ))
+      )
+    }
+  </div>
+</BlogLayout>

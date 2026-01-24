@@ -1,0 +1,153 @@
+---
+import Analytics from "../components/Analytics.astro";
+import BlogHeader from "../components/BlogHeader.astro";
+import "../styles/blog.css";
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate?: Date;
+  updatedDate?: Date;
+  author?: string;
+  image?: { src: string; alt: string };
+  isIndex?: boolean;
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  author,
+  image,
+  isIndex = false,
+} = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Feed Autodiscovery -->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed"
+      href="/blog/rss.xml"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Atom Feed"
+      href="/blog/atom.xml"
+    />
+    <link
+      rel="alternate"
+      type="application/feed+json"
+      title="JSON Feed"
+      href="/blog/feed.json"
+    />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={isIndex ? "website" : "article"} />
+    <meta property="og:url" content={canonicalURL} />
+    {
+      image && (
+        <meta property="og:image" content={new URL(image.src, Astro.site)} />
+      )
+    }
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital@0;1&family=Kirang+Haerang&family=Oi&family=Source+Code+Pro:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- KaTeX CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+      integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+      crossorigin="anonymous"
+    />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{title} | Samuel Ainsworth</title>
+
+    <!-- Theme initialization script (runs before paint to prevent flash) -->
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      })();
+      document.documentElement.classList.toggle("dark", theme === "dark");
+    </script>
+
+    <Analytics />
+  </head>
+  <body
+    class="blog-body font-serif antialiased transition-colors duration-200"
+    style="background: var(--blog-bg); color: var(--blog-text); font-family: 'Crimson Pro', Charter, Georgia, serif;"
+  >
+    <BlogHeader />
+    <main class="max-w-2xl mx-auto px-6 py-12">
+      {
+        isIndex ? (
+          <slot />
+        ) : (
+          <article class="prose-blog">
+            <header class="mb-12">
+              <span
+                class="text-5xl font-normal leading-tight mb-4"
+                style="color: var(--blog-heading);"
+              >
+                {title}
+              </span>
+              {pubDate && (
+                <div class="text-lg" style="color: var(--blog-muted);">
+                  <time datetime={pubDate.toISOString()}>
+                    {pubDate.toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                  {updatedDate && (
+                    <span class="ml-2">
+                      (Updated:{" "}
+                      <time datetime={updatedDate.toISOString()}>
+                        {updatedDate.toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </time>
+                      )
+                    </span>
+                  )}
+                </div>
+              )}
+            </header>
+            <slot />
+          </article>
+        )
+      }
+    </main>
+  </body>
+</html>

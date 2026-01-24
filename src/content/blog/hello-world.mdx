@@ -1,0 +1,111 @@
+---
+title: "Hello World"
+description: "The first poop on this blog, testing all the features including math equations and code blocks."
+pubDate: 2024-01-20
+tags: ["meta", "testing"]
+---
+
+# Heading Level 1
+
+This is body text following an h1. The quick brown fox jumps over the lazy dog. Here's some `inline code` and inline math $E = mc^2$ to show sizing.
+
+## Heading Level 2
+
+This is body text following an h2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Here's more `inline code` and math $\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}$ inline.
+
+### Heading Level 3
+
+This is body text following an h3. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+#### Heading Level 4
+
+This is body text following an h4. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+
+##### Heading Level 5
+
+This is body text following an h5. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+
+###### Heading Level 6
+
+This is body text following an h6. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+---
+
+Welcome to my blog! This is a test post demonstrating all the features.
+
+# Math Support
+
+Here's an inline equation: $E = mc^2$.
+
+And a block equation showing Maxwell's first equation:
+
+$$
+\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}
+$$
+
+Here's the softmax function commonly used in machine learning:
+
+$$
+\text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}
+$$
+
+# Code
+
+`inline code` Here's some Python code:
+
+```python
+def hello():
+    print("Hello, world!")
+
+# A simple neural network layer
+class Linear:
+    def __init__(self, in_features, out_features):
+        self.weight = np.random.randn(in_features, out_features)
+        self.bias = np.zeros(out_features)
+
+    def forward(self, x):
+        return x @ self.weight + self.bias
+```
+
+And some TypeScript:
+
+```typescript
+interface Post {
+  title: string;
+  pubDate: Date;
+  tags: string[];
+}
+
+const formatDate = (date: Date): string => {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+```
+
+# Typography
+
+This paragraph demonstrates the clean, reader-focused typography inspired by [Practical Typography](https://practicaltypography.com/). Notice the generous line height, comfortable font size, and optimal line width for reading.
+
+> A blockquote adds visual variety and helps break up long passages of text. This style is intentionally understated.
+
+## Lists
+
+Here are some things I'm interested in:
+
+- Deep learning and neural network optimization
+- Programming language theory and type systems
+- Immunology and autoimmune disease research
+- Open source software and the NixOS ecosystem
+
+And a numbered list:
+
+1. First, understand the problem
+2. Then, design a solution
+3. Finally, implement and iterate
+
+---
+
+That's all for now. More posts coming soon!

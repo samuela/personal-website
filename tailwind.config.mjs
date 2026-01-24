@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
       fontFamily: {
-        mono: ['Courier', 'monospace'],
+        mono: ['"Source Code Pro"', 'monospace'],
+        serif: ['"Crimson Pro"', 'Charter', 'Georgia', 'serif'],
       },
       colors: {
         'dark-red': '#8B0000',
