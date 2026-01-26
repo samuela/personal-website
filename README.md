@@ -1,3 +1,7 @@
+# TODO
+
+- [ ] Upgrade to Tailwind v4 (requires removing @astrojs/tailwind and using @tailwindcss/vite instead)
+
 # Specifying the node.js version
 
 The node.js version is constrained in `package.json`. Absent a setting, Render will try (and occasionally fail!) to build with different node.js versions by default. Therefore, we set `engines` in `package.json`. See https://render.com/docs/node-version for more info.
