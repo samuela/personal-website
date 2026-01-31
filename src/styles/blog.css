@@ -6,7 +6,7 @@
   --blog-link: #1e40af;
   --blog-muted: #666666;
   --blog-border: #e5e5e5;
-  --blog-code-bg: #f5f5f0;
+  --blog-code-bg: #f8f8ef;
 }
 
 .dark {
@@ -112,7 +112,7 @@
 
 /* Code blocks */
 .prose-blog pre {
-  background: var(--blog-code-bg);
+  background: var(--blog-code-bg) !important;
   padding: 1.5em;
   border-radius: 0.375rem;
   overflow-x: auto;
@@ -132,6 +132,12 @@
   font-weight: 300;
 }
 
+/* Dark mode: swap Shiki syntax highlighting colors */
+.dark .astro-code,
+.dark .astro-code span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+}
 /* Inline code spans */
 .prose-blog code:not(pre code) {
   background: var(--blog-code-bg);
