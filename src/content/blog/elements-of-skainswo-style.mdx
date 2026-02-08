@@ -1,0 +1,175 @@
+---
+title: "Elements of skainswo Style"
+description: "A codification of my personal design philosophy and programming aesthetics for software engineering."
+pubDate: 2026-02-08
+---
+
+<div class="note">
+**Note:** Unlike typical blog posts, this is a living document. It started life as a [GitHub gist](https://gist.github.com/samuela/474c9772db1b856ffe46ee7b65d0eb14) and lives on here. Please feel free to share references, questions, and comments.
+</div>
+
+In the course of my open source and day-to-day work I am occasionally asked to weigh in on software design. In the interest of my time and energy and the time and energy of others, this document is an attempt to codify as much as possible of my personal [design philosophy](https://www.youtube.com/watch?v=ypyAg3Zbs_8) and programming aesthetics. It is my goal that after reading this document and all of the linked material you will have a faithful mental model of how I think about the world and programming in particular -- hopefully to the extent that you could imitate me in a PR review or design discussion, whether or not you agree.
+
+<figure style={{textAlign: 'center', margin: '0'}}>
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyZXZzeWdyamY5aDJmMmEzd3ViNGZ6dXpia2IyYXY3MzQzMXZ5N3JoZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3WvhJ783Le5ieNEZ8z/giphy.gif" alt="i know kung fu" style={{width: '100%', borderRadius: '0.375rem', margin: '0 0 0.5em 0'}} />
+  <figcaption style={{fontSize: '0.85em', fontStyle: 'italic', color: 'var(--blog-muted)'}}>s/kung fu/skainswo's programming world view</figcaption>
+</figure>
+
+## Complexity
+
+Complexity is the enemy.
+
+> Controlling complexity is the essence of computer programming.
+>
+> -- Brian Kernighan
+
+Some people will argue that complexity is necessary, ie for performance. These people are usually wrong. They mistake accidental complexity for essential complexity, usually as an instinctual defence of the status quo. An argument may go something like "Many smart people have worked on X. If there were improvements to be made, they would have found them." What they fail to appreciate, however, is that the modern software supply chain is incredibly complex, path dependence matters, and group-think is pervasive. For example,
+- There was a time before Rust and Zig when the prevailing sentiment was that C could not be improved upon.
+- When jQuery was in full swing, it was believed to be the best paradigm for web frontend development. Enter React. Now jQuery is dead.
+- TensorFlow was at one point believed to be [unassailable](https://twitter.com/SamuelAinsworth/status/1503160274269790211). Now we have JAX and PyTorch.
+
+As a general rule, software that is ["not in The Book"](https://en.wikipedia.org/wiki/Paul_Erd%C5%91s) will inevitably be replaced. It may take months, years, or decades but it will happen.
+
+Some people may attempt to use complexity as evidence of technical novelty, their intelligence, or sophistication. "Look at how many objects and arrows are in this diagram!" These people are not to be trusted.
+
+It is easy to come up with a complex solution, it is hard to come up with a simple one. If you suspect something is accidental complexity, try removing it. If you are wrong the universe will let you know.
+
+Refs:
+  - [Simplicity | The Essence of Software](https://essenceofsoftware.com/tutorials/design-general/simplicity/)
+
+## Declarative vs imperative design
+
+This is a question of stating clearly what the state of the system is/should be and letting the process by which that state is achieved be implicit (declarative) vs specifying a sequence of operations necessary to reach some desired, implicit state (imperative).
+
+| Means of production (↓) \ State of the system (→) | Implicit | Explicit |
+| :--- | :--- | :--- |
+| **Implicit** | | declarative |
+| **Explicit** | imperative | |
+
+In my opinion, this is more interesting as a philosophical distinction than a X vs Y language discussion. You can write declarative Java and you can write imperative Haskell. Nix, a package manager best known for its declarative design, is implemented in C++. Declarative vs imperative design decisions at API boundaries tend to be higher impact than language choice.
+
+A common sentiment in the pro-imperative camp is a distrust in compilers (aka functions from goals to imperative steps). The argument goes something like "We cannot automatically transcribe our declarative goals into satisfactory imperative steps, because a sufficiently advanced compiler for our super special problem does not exist yet. Therefore, we should write the imperative steps by hand." However, it is my experience that people tend to overrate their own abilities and underrate compilers. Most modern compilers emit faster machine code than most humans most of the time. Also, consider the historical context in which we sit: In the beginning there was nothing... no compilers, just humans writing code on punch cards. Then, come compilers. Early compilers were bad. Compilers improve. Now it is a rare occurrence to see anyone writing assembly by hand. Compilers have improved at a staggering rate thus far, and I see no reason why this trend should not continue.
+
+There is no one-size-fits-all answer, but declarative is usually simpler since it makes system states more readily apparent and easier to reason about.
+
+## Object-oriented programming (OOP) is bad
+
+I grew up on Java 6. I learned the hard way. Do not repeat my mistakes.
+
+If you are not convinced I invite you to consider,
+
+  - [Dijkstra's letter to the University of Texas Budget Council](https://chrisdone.com/posts/dijkstra-haskell-java/)
+  - [Preface - Object-oriented oblivion](http://www-cs-students.stanford.edu/~blynn/c/object.html)
+  - [Subtyping, Subclassing, and Trouble with OOP](https://okmij.org/ftp/Computation/Subtyping/)
+
+### Composition over inheritance considered harmful
+
+Inheritance is the most dangerous idea in object-oriented programming.
+
+- [wiki](https://en.wikipedia.org/wiki/Composition_over_inheritance)
+- [SO](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance)
+- [The Composition Over Inheritance Principle](https://python-patterns.guide/gang-of-four/composition-over-inheritance/)
+  - Many programming languages -- Standard ML, Rust, Haskell, C -- don't even offer subtyping! If you are curious how polymorphism may work in the absence of subtyping, check out Lean/Haskell-style type classes, the OCaml module system, Rust traits, or Scala implicits.
+
+## Type systems, checking and inference
+
+Your program has types whether you like it or not. Either your types are checked statically or they are checked at runtime. Statically proving things about the runtime execution of code is one of the most powerful, widely available weapons at your disposal in the fight against complexity.
+
+In my experience, most detractors of static type systems have been hurt by experiences with languages that have dogshit type systems, e.g. Python and Java. I have yet to meet a Lean expert who disapproves of types.
+
+Algebraic data types (ADTs) are one of the most potent tools in this space. **If you are not familiar with ADTs, I implore you to stop everything you are doing right now and internalize them deep into your soul.** ([This talk](https://www.youtube.com/watch?v=-J8YyfrSwTk) is a decent place to start, especially the concept of "make illegal states unrepresentable.") The adoption of algebraic data types and exhaustive pattern matching would fix a majority of software bugs in the wild.
+
+Generalized algebraic data types (GADTs) are cool, and I trust they have their place but I have gotten by just fine on ADTs thus far. [Yaron is sold at least, and that means something.](https://blog.janestreet.com/why-gadts-matter-for-performance/)
+
+### Type-driven design
+
+The real win with types is so-called "type-driven design." Others have written well on this topic,
+
+  - Make illegal states unrepresentable [[Effective ML](https://youtu.be/-J8YyfrSwTk?si=nn7kmwWHOawfudV0&t=1080)]. IMHO this is the core essence of "thinking in types." Everything else will appear obvious after internalizing this idea.
+  - [Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
+  - [Type Safety Back and Forth](https://www.parsonsmatt.org/2017/10/11/type_safety_back_and_forth.html)
+
+### Dynamic vs static typing when working with others
+
+Sam write many codes. Many times Sam write dynamic types in large codebase, many contributors with and Sam wish for static type system. Almost no times Sam work in good (ADTs, etc) static type system and wish for dynamic type system.
+
+Dynamic types can work ok when working solo or in small group, but even then Sam mostly write dynamic code while thinking ADTs in Sam head.
+
+## Minimize code paths
+
+The fewer code paths, the easier your program is to reason about: [Cyclomatic complexity - Wikipedia](https://en.wikipedia.org/wiki/Cyclomatic_complexity), [Basis path testing - Wikipedia](https://en.wikipedia.org/wiki/Basis_path_testing)
+
+Imagine you are an automated program verifier like [KLEE](https://klee-se.org/): to prove that a function is correct, you must prove that every possible execution path of the function is correct. How many possible execution paths does your function have?
+
+Resist the urge to add a million configuration options. The number of code paths grows O(2^N).
+
+## Mutability is bad, global mutability is über bad
+
+Consider the blast radius of mutability: there are differences between mutable state scoped to a function, mutable state scoped to a larger object, and global mutable state. Note also that there is a difference between [internal mutability](https://doc.rust-lang.org/reference/interior-mutability.html) and "classic" mutability.
+  - [Avoid Mutation -- Functional Style In Ruby](https://www.rubypigeon.com/posts/avoid-mutation-functional-style-in-ruby/)
+
+## Compute vs storage tradeoffs
+
+You should almost always prefer spending compute instead of storage. This is not necessarily because compute is cheaper than storage, though it often is. Rather because it is usually simpler to spend compute than to maintain stored artifacts. As soon as you compute something and persist it to storage the clock begins ticking for you to lose track of its provenance, ie your ability to recompute it. As a discipline we are decently good at version controlling code with git, jujutsu, and so on. We have relatively weaker tooling for version controlling and tracking data.
+
+Treat computed objects as independent artifacts as soon as they are produced. Release any expectation that you will ever be able to recreate them. They will take on lives of their own, independent of your codebase. Version them. Use tools like Huggingface Datasets and Weights and Biases Artifacts to ease the burden.
+
+As an example, consider a data loader for an ML training job. The data loader pulls records from a database, filesystem, or wherever, and runs a set of preprocessors on the CPU before passing off featurized training examples to the training loop. You may be tempted to precompute features in a batch job, dump them to storage, and then run the training loop on this pre-processed dataset. Seems reasonable enough on the surface but you have now split one script into two, your colleague already started writing some other job to run on this new featurized dataset, and in two weeks that batch featurization pipeline will break due to some hairbrained change in someone else's code. Now you're stuck with two broken scripts and a new dataset that you are expected to maintain. CPUs are cheap, esp. relative to TPUs/GPUs.
+
+### Caching and garbage collection
+
+CPUs may be cheap but alas sometimes they are not cheap enough. In 99% of these cases, just throw a cache in front of your computation (aka memoization) and call it a day. Caches are good. They are simple. Caches are easy to reason about. A well-designed cache has literally no discernable effect to your API surface and things just magically run faster. [It's free money.](https://tenor.com/view/tim-and-eric-its-free-money-gif-25018125)
+
+Cache eviction is not hard. Garbage collection is well studied. It is a solved problem in almost all cases.
+
+## Bugs
+
+... most often occur at system integration boundaries and in configuration. Exhibit A: [It's always DNS.](https://isitdns.com/)
+
+## Formal verification
+
+Formal verification is likely part of the future of software engineering.
+
+I am too smoothbrain to concern myself with the differences between calculus of constructions vs higher order logic vs SMT vs homotopy type theory vs whatever else. IMHO the real distinction is whether theorem truthiness is decidable, i.e. I do not have to write proofs (Dafny, Z3, and so on) or undecidable, i.e. I have to write proofs (Lean, Roc, and so on).
+
+## Research code vs "normal" code
+
+Occasionally I am granted the opportunity to work on empirical deep learning research. In my opinion, the goals and requirements of empirical research code are so fundamentally different from "normal" code that they warrant complete separation in your brain.
+
+Experiment tracking and provenance is _the_ most important concern when writing research code: Can you exactly reproduce every plot from every experiment? Do you have a record of exactly what code was used to produce every experiment? Where is that experiment from 2 weeks ago where you tried changing the optimizer?
+
+I like to
+1. Limit experiments to single script files. If you have good libraries this is easily do-able in &lt;1k LoC.
+2. Name files like `2025_11_20_increase_learning_rate.py`.
+3. Shamelessly copy-paste yesterday's experiment code for today's experiment when it is convenient.
+4. Use XManager, Weights & Biases, or similar. This is more important than version control.
+5. Keep each script internally clean and cohesive but never introduce dependencies between experiment scripts. I may conservatively abstract common functionality into utility modules.
+
+Conventional "good" style still matters when codebases get big, but experiment code should be small.
+
+## Metaprogramming
+
+All things in moderation. Metaprogramming is good when it makes the code easier, but it can be confusing and introduce [unexpected compile-time effects](https://internals.rust-lang.org/t/is-executing-arbitrary-code-at-build-time-a-good-idea/9229). Good examples include generating de/serialization code and the like. Outside of that I rarely find myself needing to write macros. Lean does metapogramming pretty well. Metaprogramming mixed with dependent types seems like strong combo. [Rhombus](https://dl.acm.org/doi/10.1145/3622818) looks interesting too.
+
+## Miscellaneous
+
+  - Laziness is cute but it has never saved my ass. Algebraic data types have saved my ass.
+  - Content addressed storage is a good idea.
+  - Idempotency is useful.
+  - Code should fail early, fail loudly.
+  - [Why Functional Programming Matters](https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf)
+  - [The Grug Brained Developer](https://grugbrain.dev/)
+  - [Seven Diabetes Patients Die Due to Undisclosed Bug](https://sfconservancy.org/blog/2025/dec/23/seven-abbott-freestyle-libre-cgm-patients-dead/)
+  - [IEEE 754 floating point arithmetic kills 28 Americans](https://www.cs.unc.edu/~smp/COMP205/LECTURES/ERROR/lec23/node4.html)
+    - https://www-users.cse.umn.edu/~arnold/disasters/Patriot-dharan-skeel-siam.pdf
+  - [How SQLite is Tested](https://sqlite.org/testing.html)
+  - [Therac-25: Sloppy software engineering results in radiation poisoning, killing patients](https://www.cs.columbia.edu/~junfeng/08fa-e6998/sched/readings/therac25.pdf)
+    - https://en.wikipedia.org/wiki/Therac-25
+  - [To keep a Boeing Dreamliner flying, reboot once every 248 days](https://www.engadget.com/2015-05-01-boeing-787-dreamliner-software-bug.html)
+    - Integer overflow and sloppy software engineering
+    - https://betterembsw.blogspot.com/2016/12/better-reboot-your-boeing-787-every.html
+  - [Patterns for Defensive Programming in Rust](https://corrode.dev/blog/defensive-programming/)
+
+## A little goes a long way
+
+I estimate you can get 95% of the goods by simply adopting ADTs, writing functions, and avoiding mutable state.

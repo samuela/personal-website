@@ -30,7 +30,6 @@ export async function GET(context: APIContext) {
       ...(post.data.updatedDate && {
         date_modified: post.data.updatedDate.toISOString(),
       }),
-      tags: post.data.tags,
     })),
   };
 

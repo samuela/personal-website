@@ -4,10 +4,9 @@ interface Props {
   description: string;
   pubDate: Date;
   slug: string;
-  tags?: string[];
 }
 
-const { title, description, pubDate, slug, tags = [] } = Astro.props;
+const { title, description, pubDate, slug } = Astro.props;
 ---
 
 <article class="border-b pb-8" style="border-color: var(--blog-border);">
@@ -35,18 +34,4 @@ const { title, description, pubDate, slug, tags = [] } = Astro.props;
   <p class="leading-relaxed mb-3" style="color: var(--blog-text);">
     {description}
   </p>
-  {
-    tags.length > 0 && (
-      <div class="flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span
-            class="text-xs px-2 py-1 rounded"
-            style="color: var(--blog-muted); background: var(--blog-code-bg);"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-    )
-  }
 </article>
