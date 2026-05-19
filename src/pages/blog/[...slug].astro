@@ -1,20 +1,21 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 
 export async function getStaticPaths() {
+  const postSlug = (post) => post.id.replace(/\.(md|mdx)$/, '');
   const posts = await getCollection('blog', ({ data }) => {
     return import.meta.env.PROD ? !data.draft : true;
   });
 
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { slug: postSlug(post) },
     props: { post },
   }));
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <BlogLayout

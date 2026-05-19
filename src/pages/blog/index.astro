@@ -10,6 +10,8 @@ const posts = await getCollection("blog", ({ data }) => {
 const sortedPosts = posts.sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
+
+const postSlug = (post) => post.id.replace(/\.(md|mdx)$/, '');
 ---
 
 <BlogLayout
@@ -32,7 +34,7 @@ const sortedPosts = posts.sort(
             title={post.data.title}
             description={post.data.description}
             pubDate={post.data.pubDate}
-            slug={post.slug}
+            slug={postSlug(post)}
           />
         ))
       )

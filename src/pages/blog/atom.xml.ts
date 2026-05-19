@@ -1,5 +1,8 @@
 import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import type { APIContext } from 'astro';
+
+const postSlug = (post: CollectionEntry<'blog'>) => post.id.replace(/\.(md|mdx)$/, '');
 
 export async function GET(context: APIContext) {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -27,8 +30,8 @@ export async function GET(context: APIContext) {
   </author>
 ${sortedPosts.map(post => `  <entry>
     <title>${escapeXml(post.data.title)}</title>
-    <link href="${new URL(`/blog/${post.slug}/`, site)}" rel="alternate" type="text/html"/>
-    <id>${new URL(`/blog/${post.slug}/`, site)}</id>
+    <link href="${new URL(`/blog/${postSlug(post)}/`, site)}" rel="alternate" type="text/html"/>
+    <id>${new URL(`/blog/${postSlug(post)}/`, site)}</id>
     <published>${post.data.pubDate.toISOString()}</published>
     <updated>${(post.data.updatedDate || post.data.pubDate).toISOString()}</updated>
     <summary>${escapeXml(post.data.description)}</summary>
