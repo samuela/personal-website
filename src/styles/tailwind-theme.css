@@ -1,0 +1,16 @@
+/* Shared Tailwind v4 entry: framework + theme tokens + variants.
+   Imported by every CSS entry point (global.css, blog-tailwind.css) so
+   they share one config, the way they shared tailwind.config.mjs in v3. */
+@import "tailwindcss";
+
+/* Port of darkMode: 'class' from the old tailwind.config.mjs */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-mono: "Source Code Pro", monospace;
+  --font-serif: "Crimson Pro", Charter, Georgia, serif;
+
+  --color-dark-red: #8B0000;
+  --color-light-gray: #e9ecef;
+  --color-container-bg: #fefefe;
+}

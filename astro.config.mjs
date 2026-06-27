@@ -4,10 +4,14 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://samlikes.pizza',
   integrations: [mdx()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   output: 'static',
   markdown: {
     remarkPlugins: [remarkMath],
