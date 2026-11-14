@@ -1,0 +1,63 @@
+# Builds the site at the PR's base and at the PR's merge commit, and fails if
+# the generated dist/ differs. Dependency bumps should leave the output
+# byte-for-byte identical; content changes will legitimately trip this check,
+# and the job summary shows exactly what changed.
+name: Build output diff
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  dist-diff:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out merge commit
+        uses: actions/checkout@v7
+        with:
+          path: head
+          fetch-depth: 2
+
+      - name: Check out base
+        run: git -C head worktree add --detach ../base HEAD^1
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            base/package-lock.json
+            head/package-lock.json
+
+      - name: Build base
+        working-directory: base
+        run: npm ci && npm run build
+
+      - name: Build head
+        working-directory: head
+        run: npm ci && npm run build
+
+      - name: Compare dist/
+        run: |
+          if diff -r base/dist head/dist > /dev/null; then
+            echo "Build output is identical to the base branch." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          diff -ru base/dist head/dist > dist.diff || true
+          cat dist.diff
+          {
+            echo "## Build output differs from the base branch"
+            echo
+            echo '```'
+            diff -rq base/dist head/dist || true
+            echo '```'
+            echo
+            echo '```diff'
+            head -c 60000 dist.diff
+            echo
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit 1
