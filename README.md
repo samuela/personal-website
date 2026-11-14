@@ -14,14 +14,14 @@ Note that pinning the node.js version exactly is not possible since Render only 
 
 Run commands via nix-shell:
 
-### `nix-shell -p nodejs --run "npm run dev"`
+### `nix-shell -p nodejs_24 --run "npm run dev"`
 
 Starts the Astro dev server at [http://localhost:4321](http://localhost:4321). The page will reload on edits.
 
-### `nix-shell -p nodejs --run "npm run build"`
+### `nix-shell -p nodejs_24 --run "npm run build"`
 
 Builds the site for production to the `dist` folder.
 
-### `nix-shell -p nodejs --run "npm run preview"`
+### `nix-shell -p nodejs_24 --run "npm run preview"`
 
 Previews the production build locally.
